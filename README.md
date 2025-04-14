@@ -2,7 +2,7 @@
 
 A command-line Python tool that extracts and reformats recipes from YouTube cooking video transcripts using LLMs. It fetches the video transcript, constructs a prompt with detailed formatting instructions, queries an LLM via LiteLLM, and outputs a UK-friendly markdown recipe.
 
-Apart from converting weights and measures in the recipe to UK ones, it will also make suggestions for replacement ingredients if they are not commonly found in the UK.
+Apart from converting weights and measures in the recipe to UK ones, it will also make suggestions for replacement ingredients if they are not commonly found in the UK.  It will also try and localise ingredient names (eg, 'cilantro' -> 'corriander').
 
 ## Installation
 
