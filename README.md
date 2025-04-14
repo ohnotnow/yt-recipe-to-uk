@@ -34,7 +34,7 @@ uv run main.py <YOUTUBE_URL> [--prompt-file PROMPT] [--model MODEL] [--output-fi
 ### Options
 
 - `--prompt-file`: Custom prompt template filename (default: `prompt.md`)
-- `--model`: LLM model via LiteLLM (default: `openai/gpt-4o-mini`)
+- `--model`: LLM model via LiteLLM (default: `openai/o3-mini`)
 - `--output-file`: Optional name for the markdown output (default: auto-generated)
 
 ### Example
