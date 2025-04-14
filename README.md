@@ -11,8 +11,8 @@ Ensure Python 3.8+ and [uv](https://docs.astral.sh/uv/) are installed.
 Clone the repository:
 
 ```bash
-git clone <REPO_URL>
-cd <REPO_NAME>
+git clone https://github.com/ohnotnow/yt-recipe-to-uk.git
+cd yt-recipe-to-uk
 ```
 
 Install dependencies:
