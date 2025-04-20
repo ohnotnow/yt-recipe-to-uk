@@ -6,8 +6,10 @@ import argparse
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from youtube_transcript_api import YouTubeTranscriptApi
 
+project_path = os.path.abspath(os.path.dirname(__file__))
+
 def get_prompt(recipe_text: str, prompt_filename: str = 'prompt.md') -> str:
-    env = Environment(loader=FileSystemLoader('.'), autoescape=select_autoescape())
+    env = Environment(loader=FileSystemLoader(project_path), autoescape=select_autoescape())
     template = env.get_template(prompt_filename)
     return template.render(recipe_text=recipe_text)
 
@@ -57,10 +59,10 @@ def main(url: str, prompt_file: str = "prompt.md", model: str = "openai/gpt-4o-m
         if not recipe_name:
             recipe_name = "recipe"
         output_file = f"{recipe_name}-{today_string}.md"
-    os.makedirs("recipes", exist_ok=True)
-    with open(f"recipes/{output_file}", "w") as f:
+    os.makedirs(f"{project_path}/recipes", exist_ok=True)
+    with open(f"{project_path}/recipes/{output_file}", "w") as f:
         f.write(recipe)
-    print(f"Recipe saved to recipes/{output_file}")
+    print(f"Recipe saved to {project_path}/recipes/{output_file}")
 
 if __name__ == '__main__':
     today_string = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
