@@ -59,6 +59,17 @@ export OPENAI_API_KEY=...
 export ANYROUTER_API_KEY=...
 ```
 
+## Example shell function
+In your `~/.bashrc` or `~/.zshrc` :
+
+```bash
+recipe() {
+    source /Users/you/Documents/code/yt-recipe-to-uk/.venv/bin/activate
+    python /Users/you/Documents/code/yt-recipe-to-uk/main.py "$1"
+    deactivate
+}
+```
+
 ## License
 
 This project is licensed under the MIT License.
